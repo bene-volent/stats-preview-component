@@ -123,13 +123,17 @@ body {
     display: grid;
     place-items: center;
     /*Box model stuff*/
-    margin-block: 2rem;
+    margin-top: 1rem;
     min-height: 100vh;
     min-height: 100dvh;
     background: var(--clr-very-dark-blue);
     /*Miscellaneous*/
     z-index: 1;
     place-content: center;
+
+    @include mq(){
+        margin-top: 0;
+    }
 }
 
 button {
