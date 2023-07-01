@@ -6,7 +6,7 @@ let lastY = 0;
 window.addEventListener("scroll", (event) => {
     let currentY = window.scrollY || document.documentElement.scrollTop;
     let diff = Math.abs(lastY - currentY);
-    if (diff > 25) {
+    if (diff > 10) {
         if (lastY < currentY) {
             button.classList.remove("btn--hidden");
             button.classList.add("btn--show");

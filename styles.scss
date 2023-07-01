@@ -151,8 +151,8 @@ button {
         filter: hue-rotate(45deg) grayscale(0.1);
     }
     // font-size: 1rem;
-    top: 1rem;
-    left: 2rem;
+    top: 3%;
+    left: 3%;
     border-radius: 100vh;
     padding: var(--size-200) var(--size-400);
     z-index: 2;
@@ -175,7 +175,7 @@ button {
     font-family: var(--ff-inter);
 
     @include mq() {
-        top: 3rem;
+        top: 5%;
         left: auto;
         font-size: var(--size-300);
     }
