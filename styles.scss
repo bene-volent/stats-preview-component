@@ -112,33 +112,72 @@ h6 {
     --fw-bold: 700;
 }
 $breakpoint: 800px;
-
+@mixin mq($breakPoint: $breakpoint) {
+    @media (min-width: $breakPoint) {
+        @content;
+    }
+}
 body {
     /*Display stuff*/
 
     display: grid;
     place-items: center;
-    position:relative;
     /*Box model stuff*/
-  margin-block:2rem;
+    margin-block: 2rem;
     min-height: 100vh;
     min-height: 100dvh;
     background: var(--clr-very-dark-blue);
     /*Miscellaneous*/
+    z-index: 1;
     place-content: center;
 }
 
-.btn{
-    position: absolute;
-    top: 5rem;
-    font-size: 1rem;
-    border-radius: 100vh;
-    padding:var(--size-400) var(--size-900);
+button {
+    background: transparent;
+    border: none;
 }
 
-@mixin mq($breakPoint: $breakpoint) {
-    @media (min-width: $breakPoint) {
-        @content;
+.btn {
+    position: fixed;
+
+    background-color: var(--clr-soft-violet);
+    color: var(--clr-white);
+    // bottom:1px;
+    border: 1px solid hsl(var(--white) / 0.5);
+    box-shadow: 0 4px 5px hsl(var(--white) / 0.5);
+
+    &:hover,
+    &:active {
+        filter: hue-rotate(45deg) grayscale(0.1);
+    }
+    // font-size: 1rem;
+    top: 1rem;
+    left: 2rem;
+    border-radius: 100vh;
+    padding: var(--size-200) var(--size-400);
+    z-index: 2;
+    transition: translate 300ms cubic-bezier(0.36, 0.72, 0.65, 1.13);
+    &[data-full="false"] {
+        &::after {
+            content: "Full Screen";
+        }
+    }
+    &--show[data-full="true"],
+    &--hidden[data-full="true"] {
+        translate: 0;
+    }
+    &--show {
+        translate: 0 0;
+    }
+    &--hidden {
+        translate: 0 -10rem;
+    }
+    font-family: var(--ff-inter);
+
+    @include mq() {
+        top: 3rem;
+        left: auto;
+        font-size: var(--size-300);
     }
 }
 
@@ -229,15 +268,14 @@ body {
             display: grid;
             letter-spacing: 1px;
         }
-        &:hover &{
-            &_num{
-                scale:1.1;
+        &:hover & {
+            &_num {
+                scale: 1.1;
             }
-            &_subtext{
-                scale:0.9
+            &_subtext {
+                scale: 0.9;
             }
         }
-
     }
     &__stat_num {
         color: var(--clr-white);
