@@ -118,6 +118,7 @@ body {
     display: grid;
     place-items: center;
     /*Box model stuff*/
+  margin-block:2rem;
     min-height: 100vh;
     min-height: 100dvh;
     background: var(--clr-very-dark-blue);
