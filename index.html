@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      margin-top: 1rem;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .text-white {
+      font-family: var(--ff-inter);
+      color: var(--clr-white);
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="component">
+      <picture class="component__image" aria-label="Header Image">
+        <source media="(min-width: 800px)" srcset="/img/image-header-desktop.jpg">
+        <img class="component__img" src="/img/image-header-mobile.jpg" alt="Header Image">
+      </picture>
+
+      <section role="contentinfo" class="component__content">
+        <h1 class="component__heading">Get <span>insights</span> that help your business grow.
+        </h1>
+        <p class="component__paragraph">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </p>
+        <ul class="component__stats">
+          <li class="component__stat">
+            <p>
+              <span class="component__stat_num">10k+</span>
+
+              <span class="component__stat_subtext">companies</span>
+            </p>
+          </li>
+          <li class="component__stat">
+            <p>
+              <span class="component__stat_num">314</span>
+              <span class="component__stat_subtext">templates</span>
+            </p>
+          </li>
+          <li class="component__stat">
+            <p>
+              <span class="component__stat_num">12M+</span>
+              <span class="component__stat_subtext">queries</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+
+  <aside class="attribution | text-white">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/bene-volent">
+      <fa-icon class="fa-github fa-brands" style="color: #e9e9e9; font-size: 2rem;"></fa-icon>
+      Benevolent</a>.
+  </aside>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
