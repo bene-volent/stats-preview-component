@@ -115,14 +115,24 @@ $breakpoint: 800px;
 
 body {
     /*Display stuff*/
+
     display: grid;
     place-items: center;
+    position:relative;
     /*Box model stuff*/
     min-height: 100vh;
     min-height: 100dvh;
     background: var(--clr-very-dark-blue);
     /*Miscellaneous*/
     place-content: center;
+}
+
+.btn{
+    position: absolute;
+    top: 5rem;
+    font-size: 1rem;
+    border-radius: 100vh;
+    padding:var(--size-400) var(--size-900);
 }
 
 @mixin mq($breakPoint: $breakpoint) {

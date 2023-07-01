@@ -32,7 +32,10 @@
 </head>
 
 <body>
-  <main>
+  <button id="fullScreenToggle" aria-label="Toggle Fullscreen" class="btn" data-full="false">
+    <fa-icon role="img" aria-details="icon" class="fa-regular fa-maximize"></fa-icon>
+  </button>
+    <main>
     <article class="component">
       <picture class="component__image" aria-label="Header Image">
         <source media="(min-width: 800px)" srcset="/img/image-header-desktop.jpg">
@@ -75,7 +78,7 @@
   <aside class="attribution | text-white">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/bene-volent">
-      <fa-icon class="fa-github fa-brands" style="color: #e9e9e9; font-size: 2rem;"></fa-icon>
+      <fa-icon role="img" aria-details="icon" class="fa-github fa-brands" style="color: #e9e9e9; font-size: 2rem;"></fa-icon>
       Benevolent</a>.
   </aside>
   <script type="module" src="main.js"></script>
